@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <title>ACCEUIL</title>
+  <script type="text/javascript" src="gauge.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>
+        <img src="logo.png" alt="Logo ISITCOM" class="logo">
+        <strong>Audit de Securite Energetique du Data Center</strong>
+        <img src="logott.jpg" alt="Logo Tunisie Telecom" class="logo">
+    </h1>
+    <h3>ISITCOM - HAMMAM SOUSSE</h3>
+</div>
+
+
+  <div class="content">
+    <div id="gaugeContainer">
+      <canvas id="gauge-temperaturein"></canvas>
+      <canvas id="gauge-tension"></canvas>
+      <canvas id="gauge-temperatureout"></canvas>
+    </div>
+  </div>
+
+  <div class="led-section">
+    <!-- Ligne 1 : LEDs de défauts -->
+    <div class="led-group">
+      <div class="led" id="ledC_1">Defaut FC</div>
+      <div class="led" id="ledC_2">Defaut Clim</div>
+      <div class="led" id="ledC_3">Defaut STEG</div>
+      <div class="led" id="ledC_4">Defaut Red</div>
+    </div>
+  
+    <!-- Ligne 2 : LEDs d'état -->
+    <div class="led-group">
+      <div class="led" id="ledState_1">FC</div>
+      <div class="led" id="ledState_2">Clim 1</div>
+      <div class="led" id="ledState_3">Clim 2</div>
+      <div class="led" id="ledState_4">Clim 3</div>
+    </div>
+  
+    <!-- LEDs d’alerte positionnées entre les deux lignes -->
+    <div class="led-alert-wrapper">
+      <div class="led led-alert-left" id="ledTempHigh">Temp Haute</div>
+      <div class="led led-alert-right" id="ledTensionLow">Tension Basse</div>
+    </div>
+  </div>
+  
+
+
+  <table align="center" class="centrage">
+    <tr>
+      <td>
+        <button class="btn" onclick="resetEquip_FC();" type="button">Reset Free Cooling</button>
+        <button class="btn" onclick="resetEquip_Clims();" type="button">Reset Climatisseurs </button>
+        <button class="btn" onclick="resetEquip_Red();" type="button">Reset Redresseur </button>
+      </td>
+    </tr>
+  </table>
+
+  <h5><strong>Chaima Moussa</strong></h5>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
