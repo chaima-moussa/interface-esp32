@@ -127,7 +127,7 @@ var gaugetens = new RadialGauge({
 
 // Function to get current readings on the webpage when it loads for the first time
 function getReadings() {
-  fetch("http://192.168.1.120/data")
+  fetch("http://192.168.171.147/data")
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
